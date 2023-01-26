@@ -3,7 +3,7 @@ from aiogram.types import Message
 from aiogram.dispatcher.filters import Text
 from random import *
 
-API_TOKEN: str = ''
+API_TOKEN: str = 'YOUR_TOKEN'
 
 bot: Bot = Bot(token=API_TOKEN)
 dp: Dispatcher = Dispatcher(bot)
