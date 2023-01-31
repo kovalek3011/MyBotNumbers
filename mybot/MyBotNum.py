@@ -1,9 +1,15 @@
 from aiogram import Bot, Dispatcher, executor
 from aiogram.types import Message
 from aiogram.dispatcher.filters import Text
-from random import *
+from random import randint, choice
+from environs import Env
 
-API_TOKEN: str = 'YOUR_TOKEN'
+env = Env()
+env.read_env()
+
+bot_token = env('BOT_TOKEN')
+
+API_TOKEN: str = bot_token
 
 bot: Bot = Bot(token=API_TOKEN)
 dp: Dispatcher = Dispatcher(bot)
